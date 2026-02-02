@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeAI | AI-Powered Anime Avatar Creator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="anime-spinner">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sparkles"></i>
+            </div>
+            <p>Loading Anime Magic...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-robot gradient-icon"></i>
+                <span class="logo-text">Anime<span class="logo-accent">AI</span></span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#features" class="nav-link"><i class="fas fa-star"></i> Features</a></li>
+                <li><a href="#styles" class="nav-link"><i class="fas fa-palette"></i> Styles</a></li>
+                <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="#pricing" class="nav-link"><i class="fas fa-crown"></i> Pricing</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="btn btn-ghost" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn btn-outline">Sign In</button>
+                <button class="btn btn-primary" id="startCreating">
+                    <i class="fas fa-wand-sparkles"></i> Create Now
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="floating-elements">
+                <div class="float-icon"><i class="fas fa-star"></i></div>
+                <div class="float-icon"><i class="fas fa-heart"></i></div>
+                <div class="float-icon"><i class="fas fa-sparkles"></i></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Create Your Perfect
+                    <span class="gradient-text">Anime Avatar</span>
+                    with AI Magic
+                </h1>
+                <p class="hero-subtitle">
+                    Transform your photos into stunning anime characters. 
+                    50+ unique styles, from Shonen to Shojo and everything in between.
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-xl" id="uploadTrigger">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        Upload Photo
+                    </button>
+                    <button class="btn btn-outline btn-xl">
+                        <i class="fas fa-play"></i>
+                        See Demo
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h3 class="stat-number">75K+</h3>
+                            <p class="stat-label">Avatars Created</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div>
+                            <h3 class="stat-number">50+</h3>
+                            <p class="stat-label">Anime Styles</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h3 class="stat-number">10s</h3>
+                            <p class="stat-label">Generation Time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-preview">
+                <div class="preview-card">
+                    <div class="image-comparison">
+                        <div class="comparison-slider">
+                            <img src="https://via.placeholder.com/400x450/667eea/ffffff?text=Original+Photo" 
+                                 alt="Original Photo" class="original-img">
+                            <img src="https://via.placeholder.com/400x450/764ba2/ffffff?text=Anime+Avatar" 
+                                 alt="Anime Avatar" class="anime-img">
+                            <div class="slider-handle">
+                                <i class="fas fa-arrows-left-right"></i>
+                            </div>
+                        </div>
+                        <div class="comparison-label">
+                            <span class="label-original">Original</span>
+                            <span class="label-anime">Anime Version</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose <span class="gradient-text">AnimeAI</span></h2>
+                <p class="section-subtitle">Powerful features for perfect anime transformations</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Generation</h3>
+                    <p>Get your anime avatar in seconds with our optimized AI models.</p>
+                    <div class="feature-badge">FAST</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <h3>50+ Anime Styles</h3>
+                    <p>From classic Shonen to modern Isekai, choose your perfect style.</p>
+                    <div class="feature-badge">VARIETY</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Customization</h3>
+                    <p>Adjust hair color, eye style, accessories, and more to your liking.</p>
+                    <div class="feature-badge">FLEXIBLE</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud-arrow-down"></i>
+                    </div>
+                    <h3>HD Downloads</h3>
+                    <p>Download your avatars in 4K resolution for all your social profiles.</p>
+                    <div class="feature-badge">HD</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anime Styles Section -->
+    <section class="styles" id="styles">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular <span class="gradient-text">Anime Styles</span></h2>
+                <p class="section-subtitle">Transform into your favorite anime genres</p>
+            </div>
+            
+            <div class="styles-filter">
+                <button class="filter-btn active" data-filter="all">All Styles</button>
+                <button class="filter-btn" data-filter="shonen">Shonen</button>
+                <button class="filter-btn" data-filter="shojo">Shojo</button>
+                <button class="filter-btn" data-filter="seinen">Seinen</button>
+                <button class="filter-btn" data-filter="isekai">Isekai</button>
+                <button class="filter-btn" data-filter="chibi">Chibi</button>
+            </div>
+            
+            <div class="styles-grid">
+                <!-- Styles will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- File Upload Modal -->
+    <div class="modal" id="uploadModal">
+        <div class="modal-content glass">
+            <div class="modal-header">
+                <h3>Upload Your Photo</h3>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="upload-area" id="dropArea">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <h4>Drag & Drop Your Photo</h4>
+                    <p>or click to browse files</p>
+                    <p class="upload-note">Supports JPG, PNG up to 10MB</p>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+                
+                <div class="style-selection">
+                    <h4>Select Anime Style</h4>
+                    <div class="style-options">
+                        <!-- Options will be populated by JS -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancelUpload">Cancel</button>
+                <button class="btn btn-primary" id="generateAvatar">Generate Avatar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-robot gradient-icon"></i>
+                        <span class="logo-text">Anime<span class="logo-accent">AI</span></span>
+                    </div>
+                    <p>Creating magical anime avatars with AI since 2023</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <a href="#">Features</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">API</a>
+                        <a href="#">Updates</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Security</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AnimeAI. All rights reserved. Made with <i class="fas fa-heart heart-pulse"></i> for anime lovers worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/avatar-generator.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

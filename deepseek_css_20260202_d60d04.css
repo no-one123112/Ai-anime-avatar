@@ -1,0 +1,226 @@
+/* Mobile First Responsive Design */
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .styles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Desktop */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+/* Mobile Specific Fixes */
+@media (max-width: 767px) {
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    .nav-actions .btn:not(.menu-toggle) {
+        display: none;
+    }
+    
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .comparison-slider {
+        height: 350px;
+    }
+    
+    .preview-card {
+        padding: 20px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    .nav-link,
+    .filter-btn,
+    .style-option {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .slider-handle {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .feature-card:hover,
+    .style-card:hover {
+        transform: none;
+    }
+    
+    .upload-area {
+        padding: 40px 20px;
+    }
+}
+
+/* Dark Mode System Preference */
+@media (prefers-color-scheme: dark) {
+    body:not(.light-mode) {
+        background: #0f172a;
+        color: #e2e8f0;
+    }
+    
+    body:not(.light-mode) .feature-card,
+    body:not(.light-mode) .style-card,
+    body:not(.light-mode) .preview-card {
+        background: #1e293b;
+    }
+    
+    body:not(.light-mode) .stat-card {
+        background: #1e293b;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary: #0050b3;
+        --gradient: linear-gradient(135deg, #0050b3 0%, #663399 100%);
+    }
+    
+    .gradient-text,
+    .logo-accent,
+    .stat-number {
+        -webkit-text-fill-color: var(--primary);
+        background: none;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .float-icon,
+    .heart-pulse,
+    .anime-spinner i {
+        animation: none !important;
+    }
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) and (max-height: 600px) {
+    .hero {
+        padding: 100px 0 40px;
+    }
+    
+    .hero .container {
+        gap: 30px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        margin-top: 30px;
+    }
+    
+    .modal-content {
+        max-height: 85vh;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .hero-actions,
+    .styles-filter,
+    .modal,
+    .footer,
+    .menu-toggle,
+    .btn {
+        display: none !important;
+    }
+    
+    .hero,
+    .features,
+    .styles {
+        padding: 20px 0;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .gradient-text {
+        color: black !important;
+        background: none !important;
+        -webkit-text-fill-color: black !important;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: underline;
+    }
+}
